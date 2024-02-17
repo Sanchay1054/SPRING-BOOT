@@ -1,0 +1,70 @@
+<html  lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+	
+	<head>
+		Login
+	</head>
+
+	<style>
+		body
+		{
+			background-color:aliceblue;
+			justify-content: center;
+			text-align: center;
+		}
+		.login1
+		{
+			display:block;
+			position: relative;
+			text-align: center;
+			align-items: center;
+			justify-content: center;
+			background-color:aliceblue;
+		}
+		.login
+		{
+			display:block;
+			position: relative;
+			text-align: center;
+			align-items: center;
+			justify-content: center;
+			font-size:140%;
+			top:50%;
+			padding:15%;
+			
+		}
+		.loginpage
+		{
+			display:inline-block;
+			position: relative;
+			text-align: center;
+			align-items: center;
+			justify-content: center;
+			font-size:140%;
+			border: 2px  solid black;
+			padding: 3%;
+			border-radius: 20px;
+			background-color:aqua;
+			top:100%;
+		}
+	</style>
+	<body>
+		<form method="post" th:action="@{/save}">
+			<div class="login">
+				<!div class="loginpage">
+					<table class="loginpage" cellpadding="10px">
+						<tr><td>
+			Name</td> <td><input type="text"  name="name" required></td></tr>
+			<br>
+			<tr><td>
+			password</td> <td><input type="password" name="password" required></td></tr>
+			<tr><td>
+			<button value="submit" type="submit">Submit</button></td></tr>
+			<tr><td>
+			<br>
+			About</td> <td><textarea rows="10" name="about"></textarea></td></tr>
+			</table>
+			<!/div>
+			</div>
+		</form>
+	</body>
+</html>	

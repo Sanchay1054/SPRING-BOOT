@@ -1,0 +1,68 @@
+<html xmlns:th="https://thymeleaf.com">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<head>
+		Addcontent
+	</head>
+	<style>
+		body
+		{
+			background-color:aliceblue;
+			justify-content: center;
+			text-align: center;
+		}
+		.login1
+		{
+			display:block;
+			position: relative;
+			text-align: center;
+			align-items: center;
+			justify-content: center;
+			background-color:aliceblue;
+		}
+		.login
+		{
+			display:grid;
+			position: relative;
+			text-align: center;
+			align-items: center;
+			justify-content: center;
+			font-size:140%;
+			
+			
+			
+		}
+		.loginpage
+		{
+			display:inline-block;
+			position: relative;
+			text-align: center;
+			align-items: center;
+			justify-content: center;
+			font-size:140%;
+			border: 2px  solid black;
+			padding: 3%;
+			border-radius: 20px;
+			background-color:aqua;
+		}
+	</style>
+	<body>
+		<a th:href="@{/repository/{id}(id=${id})}">Repository</a>
+		<a th:href="@{/search/{id}(id=${id})}">Search</a>
+		<a th:href="@{/content/{id}(id=${id})}">Content</a>
+		
+		<div class="loginpage">
+		<form method="post" th:action="@{/savecontent/{id}(id=${id})}">
+			title<input type="text" name="title">
+			<br>
+			<p th:text="${id}"></p>
+			<input type="number" name="userid" th:value="${id}" readonly>
+			language<select name="language"><option value="C++">C++</option><option value="Python">Python</option></select>
+			<br>
+			about<input type="text" name="about">
+			<br>
+			comment<input type="text" name="comment">
+			<button type="submit" value="submit">sumbit</button>
+		</form>
+		</div>
+	</body>
+</html>
